@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antes e Depois</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <h1>Antes e depois</h1>
+
+    <button onclick="minhaFuncao()">Antecessor e Sucessor</button>
+
+    <script>
+        function minhaFuncao() {
+            let numInteiro = Number.parseInt(prompt('Digite um número inteiro qualquer:'));
+
+            let antes = numInteiro - 1;
+            let depois = numInteiro + 1;
+
+            alert(`Antes de ${numInteiro}, temos o número ${antes}. \nDepois de ${numInteiro} temos o número ${depois}.`);
+        }
+    </script>
+</body>
+
+</html>
