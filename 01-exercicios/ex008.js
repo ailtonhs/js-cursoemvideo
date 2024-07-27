@@ -15,3 +15,30 @@
 
 */
 
+//operadores Lógico
+
+/*
+! negação
+&& conjunção
+|| disjunção
+
+*/
+
+/*
+ordem de precedência
+() ** /  Operadores aritmeticos
+
+> < >= <= Operadores relacionais
+
+por fim operadores logigo
+primeiro !
+
+segundo &&
+
+terceiro ||
+
+*/
+
+//Operador Ternário
+
+// media >= 7.0 ? "Aprovado" : "Reprovado"
