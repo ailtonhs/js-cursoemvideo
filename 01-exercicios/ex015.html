@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Qual seu País</h1>
+
+
+    <form action="#">
+        <label for="txtp">Digite seu País:</label>
+        <input type="text" name="txtp" id="txtp">
+        <input type="button" value="Verificar">
+    </form>
+
+    <div>
+        <p id="res">Resultado vem aqui...</p>
+    </div>
+
+    <script>
+        let Verificar = document.getElementsByTagName('input')[1];
+
+        Verificar.addEventListener('click', minhaFuncao);
+
+        function minhaFuncao() {
+            let txtp = document.getElementById('txtp');
+            let res = document.getElementById('res');
+
+            let pais = String(txtp.value);
+
+            let nacionalidade = pais == 'Brasil' ? 'Brasileiro' : 'Estrangeiro';
+           
+    
+
+            res.innerHTML += `<p>Você é: <strong>${nacionalidade}</strong</p>`;
+        }
+    </script>
+</body>
+
+</html>
