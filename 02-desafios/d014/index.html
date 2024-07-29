@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            color: #ffffff;
+            font: normal 20px Arial;
+        }
+        header {
+            text-align: center;
+        }
+
+        main {  
+            width: 80%;
+            text-align: center;
+            margin: auto;
+
+        }
+
+        main div {
+            background-color: #ffffff;
+            width: 500px;
+            height: 500px;
+            margin: auto;
+            color: #000000;
+            border-radius: 20px;
+            box-shadow: 2px 2px 18px rgba(0, 0, 0, 0.551);
+          
+        }
+
+        main div p {
+            padding-top: 30px;
+        }
+
+        main div img {
+            width: 50%;
+            height: 50%;
+            border-radius: 50%;
+            margin-top: 35px;
+            
+        }
+
+        footer {
+            text-align: center;
+            color: #ffffff;
+            font-size: 10pt;
+            font-style: italic;
+            /* #ECE8E5 bom dia 
+            #06254F boa noite*/
+        }
+
+    </style>
+</head>
+<body onload="carregar()" id="demo">
+    <header>
+        <h1>Hora do Dia</h1>
+    </header>
+
+    <main>
+        <div>
+            <p id="hora">Aqui vai a Hora</p>
+            <img src="img/bom-dia.jpg" alt="">
+
+            <p id="res">Bom Tarde!</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; Ailton Henrique</p>
+    </footer>
+
+    <script>
+        function carregar() {
+            let horaAgora = new Date().getHours();
+
+            let corFundo = document.getElementById('demo');
+
+            let res = document.getElementById('res');
+
+            let hora = document.getElementById('hora');
+
+            let img = document.getElementsByTagName('img')[0];
+
+            hora.innerHTML = `Agora são exatamente ${horaAgora}`;
+
+
+            switch (horaAgora) {
+                case 1:
+                    img.src='img/bom-dia.jpg';
+
+                    res.innerHTML = 'Bom Dia!';
+
+                    corFundo.style.background= '#ECE8E5';
+                    break;
+
+                case 2:
+                    img.src='img/bom-dia.jpg';
+
+                    res.innerHTML = 'Bom Dia!';
+
+                    corFundo.style.background= '#ECE8E5';
+                    break;
+
+                case 3:
+                    img.src='img/bom-dia.jpg';
+
+                    res.innerHTML = 'Bom Dia!';
+
+                    corFundo.style.background= '#ECE8E5';
+                    break;
+
+                case 4:
+                    img.src='img/bom-dia.jpg';
+
+                    res.innerHTML = 'Bom Dia!';
+
+                    corFundo.style.background= '#ECE8E5';
+                    break;
+
+                case 5:
+                    img.src='img/bom-dia.jpg';
+
+                    res.innerHTML = 'Bom Dia!';
+
+                    corFundo.style.background= '#ECE8E5';
+                    break;
+
+                case 6:
+                    img.src='img/bom-dia.jpg';
+
+                    res.innerHTML = 'Bom Dia!';
+
+                    corFundo.style.background= '#ECE8E5';
+                    break;
+
+                case 7:
+                    img.src='img/bom-dia.jpg';
+
+                    res.innerHTML = 'Bom Dia!';
+
+                    corFundo.style.background= '#ECE8E5';
+                    break;
+
+                case 8:
+                    img.src='img/bom-dia.jpg';
+
+                    res.innerHTML = 'Bom Dia!';
+
+                    corFundo.style.background= '#ECE8E5';
+                    break;
+
+                case 9:
+                    img.src='img/bom-dia.jpg';
+
+                    res.innerHTML = 'Bom Dia!';
+
+                    corFundo.style.background= '#ECE8E5';
+                    break;
+
+                case 10:
+                    img.src='img/bom-dia.jpg';
+
+                    res.innerHTML = 'Bom Dia!';
+
+                    corFundo.style.background= '#ECE8E5';
+                    break;
+
+                case 11:
+                    img.src='img/bom-dia.jpg';
+
+                    res.innerHTML = 'Bom Dia!';
+
+                    corFundo.style.background= '#ECE8E5';
+                    break;
+
+                case 12:
+                    img.src = 'img/boa-tarde.jpg';
+
+                    res.innerHTML = 'Boa Tarde!';
+
+                    corFundo.style.background = '#AA93C8';
+                    break;
+
+                case 13:
+                    img.src = 'img/boa-tarde.jpg';
+
+                    res.innerHTML = 'Boa Tarde!';
+
+                    corFundo.style.background = '#AA93C8';
+                    break;
+
+                case 14:
+                    img.src = 'img/boa-tarde.jpg';
+
+                    res.innerHTML = 'Boa Tarde!';
+
+                    corFundo.style.background = '#AA93C8';
+                    break;
+
+                case 15:
+                    img.src = 'img/boa-tarde.jpg';
+
+                    res.innerHTML = 'Boa Tarde!';
+
+                    corFundo.style.background = '#AA93C8';
+                    break;
+
+                case 16:
+                    img.src = 'img/boa-tarde.jpg'
+
+                    res.innerHTML = 'Boa Tarde!';
+
+                    corFundo.style.background = '#AA93C8';
+                    break;
+
+                case 17:
+                    img.src = 'img/boa-tarde.jpg';
+
+                    res.innerHTML = 'Boa Tarde!';
+
+                    corFundo.style.background = '#AA93C8';
+                    break;
+
+                case 18:
+                    img.src = 'img/boa-noite.jpg';
+
+                    res.innerHTML = 'Boa Noite!';
+
+                    corFundo.style.background = '#06254F';
+                    break;
+
+                case 19:
+                    img.src = 'img/boa-noite.jpg';
+
+                    res.innerHTML = 'Boa Noite!';
+
+                    corFundo.style.background = '#06254F';
+                    break;
+
+                case 20:
+                    img.src = 'img/boa-noite.jpg';
+
+                    res.innerHTML = 'Boa Noite!';
+
+                    corFundo.style.background = '#06254F';
+                    break;
+
+                case 21:
+                    img.src = 'img/boa-noite.jpg';
+
+                    res.innerHTML = 'Boa Noite!';
+
+                    corFundo.style.background = '#06254F';
+                    break;
+
+                case 22:
+                    img.src = 'img/boa-noite.jpg';
+
+                    res.innerHTML = 'Boa Noite!';
+
+                    corFundo.style.background = '#06254F';
+                    break;
+
+                case 23:
+                    img.src = 'img/boa-noite.jpg';
+
+                    res.innerHTML = 'Boa Noite!';
+
+                    corFundo.style.background = '#06254F';
+                    break;
+
+                case 24:
+                    img.src = 'img/boa-noite.jpg';
+
+                    res.innerHTML = 'Boa Noite!';
+
+                    corFundo.style.background = '#06254F';
+                    break;
+
+                default :
+                break;
+            }
+
+
+        }
+    </script>
+</body>
+</html>
