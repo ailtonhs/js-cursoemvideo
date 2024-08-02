@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Idade</title>
+    <style>
+        body {
+            background-color: #00ff006c;
+            font: normal 18px Arial;
+            
+        }
+
+        header {
+            text-align: center;
+            color: #ffffff;
+        }
+        section {
+            background-color: #ffffff;
+            width: 50%;
+            margin: auto;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 10px #00000076;
+        }
+
+        footer {
+            font-style: italic;
+            font-size: 11px;
+            text-align: center;
+            font-weight: bold;
+            color: #00000080;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Verificador de Idade</h1>
+    </header>
+
+    <section>
+        <div>
+            <p>Ano de Nascimento:
+                <input type="number" name="txtano" id="txtano" min="0">
+            </p>
+
+            <p>Sexo:
+                <input type="radio" name="radsex" id="masc" checked>
+                <label for="masc">Masculino</label>
+
+                <input type="radio" name="radsex" id="fem" checked>
+                <label for="fem">Feminino</label>
+            </p>
+
+            <p>
+                <input type="button" value="Verificar" onclick="verificar()">
+            </p>
+        </div>
+
+        <div id="res">
+            Preencha os dados acima para ver o resultado!
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; Ailton Henrique</p>
+    </footer>
+
+    <script>
+        function verificar() {
+            let ano = new Date().getFullYear();
+
+            let fano = Number(document.getElementById('txtano').value);
+
+            let res = document.getElementById('res');
+
+            let img = document.createElement('img');
+
+            img.setAttribute('id', 'foto');
+
+            if (fano == 0 || fano > ano || fano < 1900) {
+                alert('[ERRO] Verifique os dados e tente novamente');
+
+            } else {
+                let sexo = document.getElementsByName('radsex');
+
+                let idade = ano - fano;
+
+                let genero = '';
+
+                if (sexo[0].checked) {
+                    genero = 'Homem';
+
+                    if (idade >= 0 && idade <= 2) {
+                        //bebe
+                        img.setAttribute('src', 'img/bebe-menino.jpg');
+
+                    } else if (idade < 12) {
+                        //crianca
+                        img.setAttribute('src', 'img/crianca-menino.jpg');
+
+                    } else if (idade <= 21) {
+                        //jovem
+                        img.setAttribute('src', 'img/adolescente-homem.jpg');
+
+                    } else if (idade < 60) {
+                        //adulto
+                        img.setAttribute('src', 'img/homem-adulto.jpg');
+
+                    } else {
+                        //idoso
+                        img.setAttribute('src', 'img/homem-idoso.jpg');
+                    }
+
+
+                } else if (sexo[1]) {
+                    genero = 'Mulher';
+
+                    if (idade >= 0 && idade <= 2) {
+                        //bebe
+                        img.setAttribute('src', 'img/bebe-menina.jpg');
+
+                    } else if (idade < 12) {
+                        //crianca
+                        img.setAttribute('src', 'img/crianca-menina.jpg');
+
+                    } else if (idade <= 21) {
+                        //jovem
+                        img.setAttribute('src', 'img/adolescente-feminina.jpg');
+
+                    } else if (idade < 60) {
+                        //adulto
+                        img.setAttribute('src', 'img/mulher-adulta.jpg');
+                    } else {
+                        //idoso
+                        img.setAttribute('src', 'img/mulher-idosa.jpg');
+                    }
+                }
+                res.style.textAlign= 'center';
+                res.innerHTML = `<p>Detectamos ${genero} com ${idade} anos.</p>`;
+                img.style.borderRadius='50%';
+                img.style.textAlign= 'center';
+
+                res.appendChild(img);
+                
+            }
+        }
+    </script>
+</body>
+</html>
